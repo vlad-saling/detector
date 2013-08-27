@@ -1,0 +1,63 @@
+/* common styling */
+
+/* classes */
+
+.hidden {
+    display:none;
+}
+
+.text-access {
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* mixins */
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+}
+
+
+//universal background mixin
+
+@mixin icon-sprite($is-bposition: 0 0, $icon-sprite:'pc.png') {
+	background: transparent;
+	background-image: url($icon-sprite);
+	background-repeat: no-repeat;
+	background-position: $is-bposition;
+}
+
+
+
+//navigation - nav parent module - can be extended
+
+.nav {
+
+	.nav--list {
+		padding: 0;
+		list-style: none;
+	}
+
+	.nav--item {
+		
+	}
+
+	.nav--link {
+		display:block;
+		text-decoration:none;
+
+		&:hover {
+			text-decoration:underline;
+		}
+	}
+
+
+	&.horizontal {
+		.nav--item {float:left}
+	}
+
+}

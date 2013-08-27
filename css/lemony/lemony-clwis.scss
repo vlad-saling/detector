@@ -1,0 +1,40 @@
+/* main file */
+
+/* config BEGIN */
+
+//put this before @import "lemony-clwis"; into your main css
+
+// set max fixed width
+// this value will be the same as highest mediaquery treshold
+// $max-fixed-width
+
+// set min fixed width
+// this value will define screen width, where all columns go 100% width (suitable for small screens)
+// min-fixed-width
+
+/* config END */
+
+/* adding default widths value in case it wasn't set in main css */
+$max-fixed-width: null !default;
+@if $max-fixed-width {}
+@else  {$max-fixed-width: 960px;}
+
+$min-fixed-width: null !default;
+@if $min-fixed-width {}
+@else  {$min-fixed-width: 768px;}
+
+
+/* base files - ready to use */
+@import "base/gzero";
+@import "base/typography";
+@import "base/grid"; /* import of apgrid */
+@import "base/common";
+@import "base/responsive"; 
+
+
+/* extensions - need to be called from scss file as mixins */
+@import "extensions/effects"; 
+@import "extensions/overlay"; 
+@import "extensions/form"; 
+
+

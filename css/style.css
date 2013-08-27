@@ -1,0 +1,421 @@
+/* main file */
+/* config BEGIN */
+/* config END */
+/* adding default widths value in case it wasn't set in main css */
+/* base files - ready to use */
+/* normalization and reset rules - partially based on normalize.css */
+/* layout */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+body {
+  *margin: 0; }
+
+/* lists */
+dl,
+menu,
+ol,
+ul {
+  margin: .5em 0; }
+
+dd {
+  margin: 0 0 0 20px; }
+
+menu,
+ol,
+ul {
+  padding: 0 0 0 20px; }
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0; }
+
+/* blockquote */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* form */
+form {
+  margin: 0; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  *overflow: visible; }
+
+/* table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* typography */
+/* default font stacks*/
+/* sans serif */
+/* serif */
+/* monospaced */
+/* font face mixin */
+/* heading */
+.heading {
+  line-height: 1em;
+  font-size: 1.15em; }
+  .heading.space {
+    margin: .25em 0; }
+    .heading.space.first {
+      margin-top: 0; }
+  .heading.peta {
+    font-size: 2.25em; }
+  .heading.tera {
+    font-size: 2.0em; }
+  .heading.giga {
+    font-size: 1.75em; }
+  .heading.mega {
+    font-size: 1.5em; }
+  .heading.kilo {
+    font-size: 1.25em; }
+  .heading.micro {
+    font-size: 1em; }
+  .heading.nano {
+    font-size: .75em; }
+  .heading.piko {
+    font-size: .5em; }
+
+/* general paragraph */
+p {
+  margin: 0;
+  line-height: 1em; }
+
+/* the grid */
+/* general container */
+.container {
+  margin: 0 auto;
+  /*padding: 0 1%;*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both; }
+  .container::after {
+    content: " ";
+    display: block;
+    clear: both; }
+  @media only screen and (max-width: 740px) {
+    .container {
+      min-width: 320px;
+      width: auto; } }
+  @media only screen and (max-width: 480px) {
+    .container {
+      min-width: 240px;
+      width: auto; } }
+  .container.full {
+    width: 100%; }
+  .container.fixed {
+    max-width: 740px; }
+
+/* grid container defining mobile wrappers, that should have a gap and not cover whole screen - usually one parent wrapper */
+@media only screen and (max-width: 740px) {
+  .container.mprime {
+    padding-left: 5%;
+    padding-right: 5%; } }
+
+/* column container */
+.cc {
+  width: 100%;
+  clear: both; }
+  .cc::after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* columns */
+/* textual gutter (layout) */
+.tg-small > [class*="c-"], .tg-small .cc > [class*="c-"] {
+  padding: 0 1% 1% 0; }
+
+.tg-medium > [class*="c-"], .tg-medium .cc > [class*="c-"] {
+  padding: 0 2% 2% 0; }
+
+.tg-large > [class*="c-"], .tg-large .cc > [class*="c-"] {
+  padding: 0 5% 5% 0; }
+
+@media only screen and (max-width: 480px) {
+  .tg-small > [class*="c-"] {
+    padding: 0 1% 1% 1%; }
+
+  .tg-medium > [class*="c-"] {
+    padding: 0 2% 2% 2%; }
+
+  .tg-large > [class*="c-"] {
+    padding: 0 5% 5% 5%; } }
+/* base grids */
+.c-1-1 {
+  width: 100%; }
+
+.c-5-1 {
+  width: 20%; }
+
+.c-5-2 {
+  width: 40%; }
+
+.c-5-3 {
+  width: 60%; }
+
+.c-5-4 {
+  width: 80%; }
+
+.c-7-1 {
+  width: 14.2%; }
+
+.c-7-2 {
+  width: 28.4%; }
+
+.c-7-3 {
+  width: 42.6%; }
+
+.c-7-4 {
+  width: 56.8%; }
+
+.c-7-5 {
+  width: 71%; }
+
+.c-7-6 {
+  width: 85.2%; }
+
+.c-12-1 {
+  width: 8.3%; }
+
+.c-12-2 {
+  width: 16.6%; }
+
+.c-12-3 {
+  width: 24.9%; }
+
+.c-12-4 {
+  width: 33.2%; }
+
+.c-12-5 {
+  width: 41.5%; }
+
+.c-12-6 {
+  width: 50%; }
+
+.c-12-7 {
+  width: 58.1%; }
+
+.c-12-8 {
+  width: 66.4%; }
+
+.c-12-9 {
+  width: 74.7%; }
+
+.c-12-10 {
+  width: 83%; }
+
+.c-12-11 {
+  width: 91.3%; }
+
+/* 12-1 substite grids for greater accurancy */
+.c-2-1 {
+  width: 50%; }
+
+.c-3-1 {
+  width: 33.3%; }
+
+.c-3-2 {
+  width: 66.6%; }
+
+.c-4-1 {
+  width: 25%; }
+
+.c-4-2 {
+  width: 50%; }
+
+/* redundant (c-2-1) but kept for sake of userfriendlyness */
+.c-4-3 {
+  width: 75%; }
+
+.c-6-1 {
+  width: 16.6%; }
+
+.c-6-2 {
+  width: 33.2%; }
+
+.c-6-3 {
+  width: 50%; }
+
+/* redundant (c-2-1) but kept for sake of userfriendlyness */
+.c-6-4 {
+  width: 66.4%; }
+
+.c-6-5 {
+  width: 83%; }
+
+/* column nesting limit -> 4 levels allowed - may be removed or tweaked if needed */
+[class*="c-"] > [class*="c-"] > [class*="c-"] > [class*="c-"] > [class*="c-"] {
+  width: 100%; }
+
+/* structural grid (layout) */
+[class*="c-"] {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 1px; }
+  @media only screen and (max-width: 480px) {
+    [class*="c-"] {
+      /* all columns go 100% frenzy on small screen */
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; } }
+
+/* import of apgrid */
+/* common styling */
+/* classes */
+.hidden {
+  display: none; }
+
+.text-access {
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap; }
+
+/* mixins */
+.nav .nav--list {
+  padding: 0;
+  list-style: none; }
+.nav .nav--link {
+  display: block;
+  text-decoration: none; }
+  .nav .nav--link:hover {
+    text-decoration: underline; }
+.nav.horizontal .nav--item {
+  float: left; }
+
+/* responsive stuff */
+/* making d images adapt their size - treshold shoud be customized */
+.r-image {
+  max-width: 100%;
+  height: auto; }
+
+/* extensions - need to be called from scss file as mixins */
+/* mixin: fade in hover transition efect */
+/* universal transition efect mixin for all or defined attributes */
+/* mixins for border radiuses | s-shorthand, c-complex */
+/* mixins for gradients | top->down td-gradient */
+/* mixins for gradients | left->right rl-gradient */
+/* effects */
+/* adding imprint look with white-ish border from top a black-ish at the bottom */
+/* overlay background dim mixin */
+.overlay-dim {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  filter: alpha(opacity=50);
+  opacity: 0.5; }
+
+.overlay-content {
+  height: auto;
+  left: 0px;
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  z-index: 9999; }
+
+.overlay-content-w {
+  position: relative;
+  width: 50%;
+  background-color: white;
+  margin: 0 auto; }
+  @media only screen and (max-width: 740px) {
+    .overlay-content-w {
+      width: 90%;
+      min-width: 240px; } }
+  .overlay-content-w .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    top: -10px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #000;
+    border: 2px solid #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    font-weight: bold; }
+  .overlay-content-w:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+.nice-input {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 8px;
+  color: #888;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4), 1px 1px 1px rgba(0, 0, 0, 0.25) inset; }
+
+.nice-button {
+  display: inline-block;
+  text-decoration: none;
+  min-width: 50px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 3px; }

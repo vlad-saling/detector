@@ -1,0 +1,90 @@
+/* typography */
+
+
+/* default font stacks*/
+
+/* sans serif */
+@mixin fs-ss-calibri {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+/* serif */
+@mixin fs-s-georgia {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+/* monospaced */
+@mixin fs-m-lucindaconsole {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+/* font face mixin */
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+      font-weight: $weight;
+      font-style: $style;
+  }
+}
+
+
+/* heading */
+
+.heading {
+    line-height: 1em;
+    font-size: 1.15em; //default heading size
+
+    &.space {
+      margin: .25em 0;
+
+      &.first {
+        margin-top: 0;
+      }
+    }
+
+    &.peta {
+        font-size: 2.25em;
+    }
+
+    &.tera {
+        font-size: 2.0em;
+    }
+
+    &.giga {
+        font-size: 1.75em;
+    }
+
+    &.mega {
+        font-size: 1.5em;
+    }
+
+    &.kilo {
+        font-size: 1.25em;
+    }
+
+    &.micro {
+        font-size: 1em;
+    }
+
+    &.nano {
+        font-size: .75em;
+    }
+
+    &.piko {
+        font-size: .5em;
+    }
+}
+
+/* general paragraph */
+
+p {
+    margin: 0;
+    line-height: 1em;
+}
+
