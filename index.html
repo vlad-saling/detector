@@ -18,55 +18,9 @@
 
   <script src="assets/lemony/js/modernizr.js"></script>
   <script src="assets/lemony/js/jquery-2.0.3.min.js"></script>
+  <script src="assets/js/jquery-detector.js"></script>
 
 
-
-  <script>
-
-
-$(window).resize(function() {
-  // This will execute whenever the window is resized
-
-  $(window).height(); // New height
-  $(window).width(); // New width
-
-  
-});
-
-$(document).ready(function(){
-
-$("#width").html(window.screen.width);
-$("#height").html(window.screen.height);
-$("#wwidth").html(window.innerWidth);
-$("#wheight").html(window.innerHeight);
-$("#dpr").html(window.devicePixelRatio);
-$("#dpi--value").html(window.devicePixelRatio*96);
-
-
-$("#em--value").append("<span style=\"display:inline-block; padding:0; line-height:1; position:absolute; visibility:hidden; font-size:1em\">M</span>");
-
-var emheight = $("#em--value span").height();
-$("#em--value").html(emheight);
-
-
-});
-
-
-
-
-
-  </script>
-
-
-
-<style>
-
-/*
-
-min-resolution: 96dpi works for IE browsers
-
-*/
-</style>
   
 </head>
 
@@ -99,15 +53,7 @@ min-resolution: 96dpi works for IE browsers
 
  
 
-  
 
-
-  <script> // Change UA-XXXXX-X to be your site's ID
-   // window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-   // Modernizr.load({
-   //   load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-   // });
-  </script>
 
 
   

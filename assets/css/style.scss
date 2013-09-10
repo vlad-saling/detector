@@ -1,7 +1,8 @@
 $max-fixed-width: 768px;
 $min-fixed-width: 480px;
 
-
-
 @import "../lemony/scss/lemony-clwis"; 
 
+body {
+	padding: 50px 20px
+}

@@ -437,3 +437,6 @@ p {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#eeeeee, endColorstr=#dddddd,GradientType=0 );
   /* IE6-9 */ }
+
+body {
+  padding: 50px 20px; }
