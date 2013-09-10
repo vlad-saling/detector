@@ -3,14 +3,27 @@
 /* classes */
 
 .hidden {
-    display:none;
+    display:none !important;
 }
 
-.text-access {
+@mixin text-access {
 	text-indent: 100%;
 	overflow: hidden;
 	white-space: nowrap;
 }
+
+.text-access {
+	@include text-access
+}
+
+.f-left {
+	float: left !important;
+}
+
+.f-right {
+	float: right !important;
+}
+
 
 /* mixins */
 
@@ -60,4 +73,40 @@
 		.nav--item {float:left}
 	}
 
+}
+
+
+//media object
+
+.media {
+	margin: 10px;
+	overflow: hidden;
+
+	//making sure image will fit - hopefully
+	.media--content {
+		width: 100%;
+		height: auto;
+	}
+
+}
+
+
+// content toggle - css-based navigation 
+
+//if applied to HTML, first .content-cell must be the last-of-type in order for css to work correctly
+
+.content-cell {
+	display:none;
+}
+
+.content-cell[id]:target {
+	display:block;
+}
+
+.content-cell:not(:target) ~ .content-cell:last-of-type {
+	display:block;
+}
+
+.content-cell:target ~ .content-cell:last-of-type {
+	display:none;
 }

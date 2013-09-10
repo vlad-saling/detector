@@ -92,6 +92,14 @@ table {
   border-spacing: 0; }
 
 /* typography */
+/* responsive font size */
+@media only screen and (max-width: 960px) {
+  body {
+    font-size: 14px; } }
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 12px; } }
+
 /* default font stacks*/
 /* sans serif */
 /* serif */
@@ -125,7 +133,7 @@ table {
 /* general paragraph */
 p {
   margin: 0;
-  line-height: 1em; }
+  line-height: 1.25em; }
 
 /* the grid */
 /* general container */
@@ -140,21 +148,21 @@ p {
     content: " ";
     display: block;
     clear: both; }
-  @media only screen and (max-width: 740px) {
+  @media only screen and (max-width: 960px) {
     .container {
       min-width: 320px;
       width: auto; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     .container {
       min-width: 240px;
       width: auto; } }
   .container.full {
     width: 100%; }
   .container.fixed {
-    max-width: 740px; }
+    max-width: 960px; }
 
 /* grid container defining mobile wrappers, that should have a gap and not cover whole screen - usually one parent wrapper */
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 960px) {
   .container.mprime {
     padding-left: 5%;
     padding-right: 5%; } }
@@ -179,7 +187,7 @@ p {
 .tg-large > [class*="c-"], .tg-large .cc > [class*="c-"] {
   padding: 0 5% 5% 0; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .tg-small > [class*="c-"] {
     padding: 0 1% 1% 1%; }
 
@@ -188,108 +196,67 @@ p {
 
   .tg-large > [class*="c-"] {
     padding: 0 5% 5% 5%; } }
-/* base grids */
-.c-1-1 {
-  width: 100%; }
+/* base grid */
+.c-one {
+  width: 8.33333%; }
 
-.c-5-1 {
-  width: 20%; }
+.c-two {
+  width: 16.66667%; }
 
-.c-5-2 {
-  width: 40%; }
-
-.c-5-3 {
-  width: 60%; }
-
-.c-5-4 {
-  width: 80%; }
-
-.c-7-1 {
-  width: 14.2%; }
-
-.c-7-2 {
-  width: 28.4%; }
-
-.c-7-3 {
-  width: 42.6%; }
-
-.c-7-4 {
-  width: 56.8%; }
-
-.c-7-5 {
-  width: 71%; }
-
-.c-7-6 {
-  width: 85.2%; }
-
-.c-12-1 {
-  width: 8.3%; }
-
-.c-12-2 {
-  width: 16.6%; }
-
-.c-12-3 {
-  width: 24.9%; }
-
-.c-12-4 {
-  width: 33.2%; }
-
-.c-12-5 {
-  width: 41.5%; }
-
-.c-12-6 {
-  width: 50%; }
-
-.c-12-7 {
-  width: 58.1%; }
-
-.c-12-8 {
-  width: 66.4%; }
-
-.c-12-9 {
-  width: 74.7%; }
-
-.c-12-10 {
-  width: 83%; }
-
-.c-12-11 {
-  width: 91.3%; }
-
-/* 12-1 substite grids for greater accurancy */
-.c-2-1 {
-  width: 50%; }
-
-.c-3-1 {
-  width: 33.3%; }
-
-.c-3-2 {
-  width: 66.6%; }
-
-.c-4-1 {
+.c-three {
   width: 25%; }
 
-.c-4-2 {
+.c-four {
+  width: 33.33333%; }
+
+.c-five {
+  width: 41.66667%; }
+
+.c-six {
   width: 50%; }
 
-/* redundant (c-2-1) but kept for sake of userfriendlyness */
-.c-4-3 {
+.c-seven {
+  width: 58.33333%; }
+
+.c-eight {
+  width: 66.66667%; }
+
+.c-nine {
   width: 75%; }
 
-.c-6-1 {
-  width: 16.6%; }
+.c-ten {
+  width: 83.33333%; }
 
-.c-6-2 {
-  width: 33.2%; }
+.c-eleven {
+  width: 91.66667%; }
 
-.c-6-3 {
+.c-twelve {
+  width: 100%; }
+
+/* fraction grid */
+.c-half {
   width: 50%; }
 
-/* redundant (c-2-1) but kept for sake of userfriendlyness */
-.c-6-4 {
-  width: 66.4%; }
+.c-third {
+  width: 33.3333%; }
 
-.c-6-5 {
-  width: 83%; }
+.c-fourth {
+  width: 25%; }
+
+.c-fifth {
+  width: 20%; }
+
+.c-sixth {
+  width: 16.66667%; }
+
+.c-seventh {
+  width: 14.28%; }
+
+.c-eighth {
+  width: 12.5%; }
+
+.c-ninth {
+  width: 11.11111%; }
 
 /* column nesting limit -> 4 levels allowed - may be removed or tweaked if needed */
 [class*="c-"] > [class*="c-"] > [class*="c-"] > [class*="c-"] > [class*="c-"] {
@@ -301,14 +268,18 @@ p {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  min-height: 1px; }
-  @media only screen and (max-width: 480px) {
+  min-height: 1px;
+  padding: 0 10px; }
+  @media only screen and (max-width: 768px) {
     [class*="c-"] {
       /* all columns go 100% frenzy on small screen */
       width: 100%;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; } }
+
+[class*="c-"] + [class*="c-"]:last-child {
+  float: right; }
 
 /* import of apgrid */
 /* common styling */
@@ -372,7 +343,7 @@ p {
   width: 50%;
   background-color: white;
   margin: 0 auto; }
-  @media only screen and (max-width: 740px) {
+  @media only screen and (max-width: 960px) {
     .overlay-content-w {
       width: 90%;
       min-width: 240px; } }
@@ -398,24 +369,39 @@ p {
     display: block;
     clear: both; }
 
-.nice-input {
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
-  padding: 8px;
-  color: #888;
-  width: 100%;
+.nice-input, .nice-button {
+  margin: 2px 0;
+  padding: 5px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  border-radius: 3px;
+  border: none; }
+
+.nice-input {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #888;
+  width: 100%;
   box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4), 1px 1px 1px rgba(0, 0, 0, 0.25) inset; }
 
 .nice-button {
   display: inline-block;
+  border: 1px solid #aaa;
   text-decoration: none;
   min-width: 50px;
   text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 8px 12px;
-  border-radius: 3px; }
+  color: #222;
+  background: #eeeeee;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #eeeeee, #dddddd);
+  /* FF3.6+ */
+  background: -webkit-linear-gradient(top, #eeeeee, #dddddd);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eeeeee, #dddddd);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #eeeeee, #dddddd);
+  /* IE10+ */
+  background: linear-gradient(top, #eeeeee, #dddddd);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#eeeeee, endColorstr=#dddddd,GradientType=0 );
+  /* IE6-9 */ }

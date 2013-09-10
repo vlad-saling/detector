@@ -80,3 +80,79 @@
     border-top: 1px solid transparent; 
     border-bottom: 1px solid transparent; 
 }
+
+
+
+/* css triangles */
+
+//regular triangles
+
+@mixin triangle($size:5px, $direction:left, $inverted:false, $color:#000) {
+
+    width: 0; 
+    height: 0; 
+
+
+    @if $inverted == false {
+
+        @if $direction == "up" or $direction == "down" {
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+
+            @if $direction == "up" {
+                border-bottom: $size solid $color;
+            }
+
+            @else if $direction == "down" {
+                border-top: $size solid $color;
+            }
+        }
+
+ 
+
+        @else if $direction == "right" or $direction == "left" {
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent;
+
+            @if $direction == "right" {
+                border-left: $size solid $color;
+            }
+
+            @else if $direction == "left" {
+                border-right: $size solid $color;
+            }
+        }
+    }
+
+    @else {
+
+        @if $direction == "up" or $direction == "down" {
+            border-left: $size solid $color;
+            border-right: $size solid $color;
+
+            @if $direction == "up" {
+                border-bottom: $size solid transparent;
+            }
+
+            @else if $direction == "down" {
+                border-top: $size solid transparent;
+            }
+        }
+ 
+
+        @else if $direction == "right" or $direction == "left" {
+            border-top: $size solid $color;
+            border-bottom: $size solid $color;
+
+            @if $direction == "right" {
+                border-left: $size solid transparent;
+            }
+
+            @else if $direction == "left" {
+                border-right: $size solid transparent;
+            }
+        }
+    }
+}
+
+

@@ -1,14 +1,19 @@
 //form	elements
 
+.nice-input, .nice-button {
+	margin: 2px 0;
+	padding: 5px;
+	@include border-box;
+	border-radius: 3px;
+	border:none;
+}
+
 //universal input style
 
 .nice-input {
 	border: 1px solid rgba(0,0,0,.5);
-	border-radius: 3px;
-	padding: 8px;
 	color: #888;
 	width: 100%;
-	@include border-box;
 	box-shadow: 1px 1px 1px rgba(255,255,255,.4),
 	1px 1px 1px rgba(0,0,0,.25) inset;
 }
@@ -18,10 +23,10 @@
 
 .nice-button {
 	display: inline-block;
+	border: 1px solid #aaa;
 	text-decoration: none;
 	min-width: 50px;
 	text-align: center;
-	@include border-box;
-	padding: 8px 12px;
-	border-radius: 3px;
+	color: #222;
+	@include td-gradient(#eee,#ddd);
 }

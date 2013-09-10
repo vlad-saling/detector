@@ -1,5 +1,17 @@
 /* typography */
 
+/* responsive font size */
+
+body {
+
+    @media only screen and (max-width: $max-fixed-width) {
+      font-size: 14px;
+    }
+
+    @media only screen and (max-width: $min-fixed-width) {
+      font-size: 12px;
+    }
+}
 
 /* default font stacks*/
 
@@ -85,6 +97,6 @@
 
 p {
     margin: 0;
-    line-height: 1em;
+    line-height: 1.25em;
 }
 
