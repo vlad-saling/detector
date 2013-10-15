@@ -21,6 +21,9 @@ var emheight = $("#em--value span").height();
 $("#em--value").html(emheight);
 
 
+//user agent
+$('#user-agent').html(navigator.userAgent);
+
 });
 
 
