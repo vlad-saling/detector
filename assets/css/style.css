@@ -468,3 +468,5 @@ body {
   color: #eee;
   font-weight: bold;
   display: inline-block; }
+  .value.alt {
+    display: block; }

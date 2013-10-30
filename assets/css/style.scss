@@ -35,4 +35,9 @@ body {
 	color: #eee;
 	font-weight: bold;
 	display: inline-block;
+
+	&.alt {
+		display:block;
+	}
+	
 }

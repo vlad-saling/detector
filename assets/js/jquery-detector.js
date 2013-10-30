@@ -24,6 +24,20 @@ $("#em--value").html(emheight);
 //user agent
 $('#user-agent').html(navigator.userAgent);
 
+
+//accelerometer test
+window.ondevicemotion = function(event) {  
+    var accelerationX = event.accelerationIncludingGravity.x;  
+    var accelerationY = event.accelerationIncludingGravity.y;  
+    var accelerationZ = event.accelerationIncludingGravity.z;  
+
+
+    //screen dimensions
+    $("#X").html(accelerationX);
+    $("#Y").html(accelerationY);
+    $("#Z").html(accelerationZ);
+}  
+
 });
 
 
