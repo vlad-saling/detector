@@ -38,6 +38,8 @@ window.ondevicemotion = function(event) {
     $("#Z").html(accelerationZ);
 }  
 
+
+
 });
 
 
