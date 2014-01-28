@@ -4,6 +4,9 @@ $(document).ready(function(){
 $("#width").html(window.screen.width);
 $("#height").html(window.screen.height);
 
+//screen physical dimensions
+$("#rwidth").html(window.screen.width*window.devicePixelRatio);
+$("#rheight").html(window.screen.height*window.devicePixelRatio);
 
 //viewport dimensions
 $("#wwidth").html(window.innerWidth);
