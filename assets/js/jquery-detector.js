@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+
+    setTimeout(calculateStuff, 200);
+
+
+
+
+});
+
+
+function calculateStuff() {
+
+
 //screen dimensions
 $("#width").html(window.screen.width);
 $("#height").html(window.screen.height);
@@ -42,7 +54,7 @@ window.ondevicemotion = function(event) {
 }  
 
 
-
-});
+    
+};
 
 
