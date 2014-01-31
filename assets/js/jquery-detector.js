@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+
     setTimeout(calculateStuff, 200);
 });
 
@@ -9,8 +11,6 @@ $(window).resize(function() {
 
 
 function calculateStuff() {
-
-iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
 
 
 if (iOS) {
