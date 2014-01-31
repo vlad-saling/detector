@@ -1,24 +1,44 @@
 $(document).ready(function(){
 
-
     setTimeout(calculateStuff, 200);
+});
 
-
-
-
+$(window).resize(function() {
+    setTimeout(calculateStuff, 200);
 });
 
 
 function calculateStuff() {
 
+iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
 
-//screen dimensions
+
+if (iOS) {
+
+    //screen dimensions
+    $("#width").html(window.screen.width*window.devicePixelRatio);
+    $("#height").html(window.screen.height*window.devicePixelRatio);
+
+    //screen physical dimensions
+    $("#rwidth").html(window.screen.width);
+    $("#rheight").html(window.screen.height);
+
+
+}
+
+else {
+
+    //screen dimensions
 $("#width").html(window.screen.width);
 $("#height").html(window.screen.height);
 
-//screen physical dimensions
-$("#rwidth").html(window.screen.width*window.devicePixelRatio);
-$("#rheight").html(window.screen.height*window.devicePixelRatio);
+    //screen physical dimensions
+    $("#rwidth").html(window.screen.width/window.devicePixelRatio);
+    $("#rheight").html(window.screen.height/window.devicePixelRatio);
+
+
+}
+
 
 //viewport dimensions
 $("#wwidth").html(window.innerWidth);
