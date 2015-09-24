@@ -41,3 +41,21 @@ body {
 	}
 	
 }
+
+.portrait,
+.landscape {
+    display: none;
+}
+
+@media only screen and (orientation: portrait) {
+    .portrait {
+        display: inline;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .landscape {
+        display: inline;
+    }
+}
+
