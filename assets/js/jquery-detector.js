@@ -1,3 +1,4 @@
+/* global iOS */
 /* global $ */
 $(document).ready(function(){
 
