@@ -1,3 +1,4 @@
+/* global $ */
 $(document).ready(function(){
 
     iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
